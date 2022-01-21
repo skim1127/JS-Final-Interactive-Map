@@ -95,8 +95,7 @@ var submit = document.querySelector('#submit-btn')
 
 // SUBMIT BUTTON
 // get business type
-submit.addEventListener('click', async (event) => {
-    event.preventDefault()
+submit.addEventListener('click', async () => {
 
     let business = businessType.value
     // search up businesses on foursquare
@@ -112,6 +111,7 @@ submit.addEventListener('click', async (event) => {
 
 // on Load
 window.onload = async () => {
+    
     const coords = await getCoords()
     myMap.coordinates = coords
     myMap.loadMap(coords)
